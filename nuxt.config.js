@@ -20,9 +20,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com'},
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'true'},
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:wght@400;700&display=swap'}
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:wght@400;700&display=swap' }
     ]
   },
 
@@ -70,11 +70,10 @@ export default {
       ]
     }
   },
-
-  serverMiddleWare: [
+  serverMiddleware: [
     {
       path: '/api/movie',
-      // path: '/.netlify/functions/movie'
+      // path: '/.netlify/functions/movie',
       handler: '~/server-middleware/movie.js'
     }
   ]
