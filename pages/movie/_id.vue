@@ -77,8 +77,8 @@ export default {
   components: {
     Loader
   },
-  asyncData({ store, params }) {
-    store.dispatch ('movie/searchMovieWithId', {
+  async asyncData({ store, params }) {
+    await store.dispatch ('movie/searchMovieWithId', {
       id: params.id
     })
     // this.searchMovieWithId({
